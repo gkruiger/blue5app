@@ -11,7 +11,7 @@ const Bar = ({symbol, length, position, setPosition}) => {
 
   return (
     <Text>
-      <TouchableOpacity onPress={() => {q(); if(position[symbol] > 0) {let newPosition = position.slice(); newPosition[symbol]--; setPosition(newPosition)}}}>
+      <TouchableOpacity onPress={() => {if(position[symbol] > 0) {let newPosition = position.slice(); newPosition[symbol]--; setPosition(newPosition)}}}>
         <DejaVuSansMonoText extraStyle={{fontSize: 40, marginBottom: -15}}>
         {'\u{25C0} '}
         </DejaVuSansMonoText>
@@ -23,7 +23,7 @@ const Bar = ({symbol, length, position, setPosition}) => {
           })}
         </DejaVuSansMonoText>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => {q(); if(position[symbol] < length-1) {let newPosition = position.slice(); newPosition[symbol]++; setPosition(newPosition)}}}>
+      <TouchableOpacity onPress={() => {if(position[symbol] < length-1) {let newPosition = position.slice(); newPosition[symbol]++; setPosition(newPosition)}}}>
         <DejaVuSansMonoText extraStyle={{fontSize: 40, marginBottom: -15}}>
           {' \u{25B6}'}
         </DejaVuSansMonoText>

@@ -73,11 +73,11 @@ export const HeatDistributor = ({solutionFound}) => {
         <View>
           <TouchableOpacity onPress={() => changeHandle()}>
             <Text style={{fontSize: 80, lineHeight: 110}}>
-              {handle ? '\u{2443}' : ' '}
+              {handle ? ' ' : '\u{2443}'}
             </Text>
           </TouchableOpacity>
           <Text style={{fontSize: 80, lineHeight: 70}}>
-            {handle ? ' ' : '\u{2442}'}
+            {handle ? '\u{2442}' : ' '}
           </Text>
         </View>
       </View>

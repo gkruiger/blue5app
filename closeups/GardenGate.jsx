@@ -45,7 +45,6 @@ export const GardenGate = ({solutionFound}) => {
   ]
 
   const handleClick = (rowIndex, celIndex) => {
-    console.log(`${rowIndex} + ${celIndex}`)
     let newInput = JSON.parse(JSON.stringify(input))
     newInput[rowIndex][celIndex] = newInput[rowIndex][celIndex] == possibleLines.length - 1 ? 0 : newInput[rowIndex][celIndex] + 1
     setInput(newInput)

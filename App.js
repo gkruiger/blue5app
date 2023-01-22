@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import React from 'react'
 import {useState, useEffect} from 'react'
 
-import { StyleSheet, DevSettings } from 'react-native';
+import { StyleSheet, DevSettings, StatusBar } from 'react-native';
 
 import RNRestart from 'react-native-restart'
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -16,6 +16,7 @@ import CloseUp from './CloseUp'
 import Sound from './Sound'
 
 import {interactions, locations} from './gameData'
+import { ScrollView } from 'react-native';
 
 export default function App() {
   
@@ -46,19 +47,17 @@ export default function App() {
   const [closeUp, setCloseUp] = useState(undefined)
  
   useEffect(() => {
-    if(true) {
-      AsyncStorage.setItem(
-        'state',
-        JSON.stringify({
-          isSoundOn: isSoundOn,
-          actions: actions,
-          storyLines: storyLines,
-          location: location,
-          history: history,
-          closeUp: closeUp,
-        })
-      )
-    }
+    AsyncStorage.setItem(
+      'state',
+      JSON.stringify({
+        isSoundOn: isSoundOn,
+        actions: actions,
+        storyLines: storyLines,
+        location: location,
+        history: history,
+        closeUp: closeUp,
+      })
+    )
   }, [isSoundOn, actions, storyLines, location, history, closeUp]);
  
   const processAction = (id) => {
@@ -66,7 +65,10 @@ export default function App() {
     if(id == 79) {
       setTimeout(() => {
         setStoryLines([])
-        setStoryLines([{text: 'The rest of the journey might one time be written.<br/><br/>Thanks for playing!', id: uuidv4()}])
+        setStoryLines([
+          {text: 'The rest of the journey might one time be written.', id: uuidv4()},
+          {text: 'Thanks for playing!', id: uuidv4()}
+        ])
       }, 6000);
     }
     
@@ -170,24 +172,30 @@ export default function App() {
   return (
     stateIsLoaded &&
       <View>
+        <StatusBar
+          backgroundColor="#aaa"
+          barStyle='dark-content'
+        />
         <Menu
           appStyle={styles.appStyle}
           isSoundOn={isSoundOn} 
           setIsSoundOn={setIsSoundOn}
           restart={restart}
-        />    
-        <CloseUp
-          appStyle={styles.appStyle}
-          closeUp={closeUp}
-          solutionFound={solutionFound}
         />
-        <Actions
-          appStyle={styles.appStyle}
-          actions={actions}
-          processAction={processAction}
-          closeUp={closeUp}
-          setCloseUp={setCloseUp}
-        />
+        <ScrollView>
+          <CloseUp
+            appStyle={styles.appStyle}
+            closeUp={closeUp}
+            solutionFound={solutionFound}
+          />
+          <Actions
+            appStyle={styles.appStyle}
+            actions={actions}
+            processAction={processAction}
+            closeUp={closeUp}
+            setCloseUp={setCloseUp}
+          />
+        </ScrollView>
         <Story
           appStyle={styles.appStyle}
           lines={storyLines}

@@ -59,7 +59,7 @@ export const Note = ({id}) => {
           <DejaVuSansMonoText fontWeight='bold'>Mission brief (2/2)</DejaVuSansMonoText>{"\n"}
           Dr. Berry insisted for this mission to go alone. 
           He was supposed to send regular updates, but none was ever received.
-          Team BLUE is now in charge of finding and bringing him back. 
+          Team BLUE is now in charge of finding him and bringing him back. 
           The team consists of Zendaya (BLUE1), Alexandar (BLUE2), Sarah (BLUE3), Rafael (BLUE4) and you (BLUE5) of course.
           You'll be going alone.
         </DejaVuSansMonoText>
@@ -115,7 +115,7 @@ export const Note = ({id}) => {
         <DejaVuSansMonoText>
           <DejaVuSansMonoText fontWeight='bold'>K81-4288-62</DejaVuSansMonoText>{"\n"}
           Last night the heat reader was fiddled with for the third time this week.{"\n"}
-          I don't want to set it to the rights settings again each morning, so I've put a simple lock on it.{"\n"}
+          I don't want to set it to the right settings again each morning, so I've put a simple lock on it.{"\n"}
           That should do the trick.{"\n"}
         </DejaVuSansMonoText>
         <Text style={{textAlign: 'center'}}>
@@ -170,7 +170,7 @@ export const Note = ({id}) => {
           <DejaVuSansMonoText fontWeight='bold'>K81-4289-12</DejaVuSansMonoText>{"\n"}
           Kayana showed me her garden today.
           It was really lovely, both the garden itself and seeing her so full of passion for it.
-          Apart from the colorful flowers, plant and trees, she also showed me the statues.
+          Apart from the colorful flowers, plants and trees, she also showed me the statues.
           She confirmed what I already suspected: they represent their gods:
       </DejaVuSansMonoText>
     ,
@@ -194,7 +194,7 @@ export const Note = ({id}) => {
           ?{' '}
           {String.fromCodePoint(0x2501)}{' '}
           {String.fromCodePoint(0x25C1)}{"\n"}{"\n"}
-          After that, she gave me that special look of hers, smiled and walked away.     
+          After that, she gave me that special look of hers, smiled and walked away.
       </DejaVuSansMonoText>
     ]
   }, {
@@ -289,7 +289,7 @@ export const Note = ({id}) => {
          03 21 23 32          
         </AyanaText>{'\n'}
         {'\n'}
-        I'll definitely take a look tomorrow.  
+        I'll definitely take a look tomorrow.
       </DejaVuSansMonoText>
     ]
   }, {
@@ -298,19 +298,19 @@ export const Note = ({id}) => {
       <DejaVuSansMonoText>
         <DejaVuSansMonoText fontWeight='bold'>K81-4293-5</DejaVuSansMonoText>{"\n"}
           Of course I couldn't miss the two great canvasses in Akamai's lab.
-          I quickly learned that he considered it his life's work.
+          I quickly learned that he considered them his life's work.
           His mission - as he told me - was to discover every element within nature.
           In the last two years, he had extended his list to fourteen different elements.
           For each element he created a symbol and a name.
           Neat!
-          I suspected that the elements he discovered were already known to science, but I didn't date to spoil the fun.
+          I suspected that the elements he discovered were already known to science, but I didn't dare to spoil the fun.
       </DejaVuSansMonoText>
     ,
       <DejaVuSansMonoText>
         <DejaVuSansMonoText fontWeight='bold'>K81-4293-5 (continued)</DejaVuSansMonoText>{"\n"}
-          I spend a full day is his lab, asking him al kinds of questions.
+          I spent a full day is his lab, asking him al kinds of questions.
           He was eager to answer and happily let me use his devices.
-          End the end of the day I was able to translate the Ayana names for the elements Akamai discovered to the ones I'm familiar with:
+          At the end of the day I was able to translate the Ayana names for the elements Akamai discovered to the ones I'm familiar with.
       </DejaVuSansMonoText>
     ,
       <DejaVuSansMonoText>
@@ -419,7 +419,7 @@ export const Note = ({id}) => {
         <DejaVuSansMonoText fontWeight='bold'>K81-4294-82</DejaVuSansMonoText>{"\n"}
         Akamai believed that the elements he had found could be combined.
         He was convinced that certain combinations would unlock new possibilities. 
-        He said already found one: fire and oil, and he hoped 
+        He said he already found one: fire and oil, and he hoped 
         Ailua was honored by this discovery, as it provided his people with continuous warmth and light.
         He had high hopes for combining Awina's element with its three variants.
       </DejaVuSansMonoText>

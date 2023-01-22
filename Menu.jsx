@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { StyleSheet, View, Alert, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, Text, Linking, TouchableOpacity } from 'react-native'
 
 import DejaVuSansMono from './DejaVuSansMonoText'
 import Modal from './Modal'
@@ -29,11 +29,42 @@ export default function Menu({isSoundOn, setIsSoundOn, restart, appStyle}) {
           />
           <Modal
             title='About'
-            message= {
-              'The game A Dark Room inspired me to develop a game of my own.' +
-              'Game design is heavy influenced by games like Beneath a Steel Sky, ' +
-              'Flashback, Myst & Riven, Subnautica, The Secret of Monkey Island ' +
-              'and The Witness. Music is done by Jesse Kruiger.'
+            content = {
+              <Text>
+                Made by Gertjan Kruiger.
+                Music by Jesse Kruiger.
+                More about this game on my{' '} 
+                <Text
+                  style={styles.hyperlinkStyle}
+                  onPress={() => {
+                    Linking.openURL('https://www.ontdeksels.nl/blue5-an-adventure-in-monospace/');
+                  }}>
+                  personal website
+                </Text>.
+                You can also play this game{' '} 
+                <Text
+                  style={styles.hyperlinkStyle}
+                  onPress={() => {
+                    Linking.openURL('https://blue5.ontdeksels.nl/');
+                  }}>
+                  online
+                </Text>.
+                Code available in Github (
+                <Text
+                  style={styles.hyperlinkStyle}
+                  onPress={() => {
+                    Linking.openURL('https://github.com/gkruiger/blue5');
+                  }}>
+                  Web
+                </Text>|
+                <Text
+                  style={styles.hyperlinkStyle}
+                  onPress={() => {
+                    Linking.openURL('https://github.com/gkruiger/blue5app');
+                  }}>
+                  App
+                </Text>).
+              </Text>
             }
             isVisible={isAboutVisible}
             setIsVisible={setIsAboutVisible}
@@ -50,9 +81,11 @@ export default function Menu({isSoundOn, setIsSoundOn, restart, appStyle}) {
           />
           <Modal
             title='Restart'
-            message= {
-              `You will loose all your progress and start the game rom the beginning. ` +
-              `Are you sure?`
+            content = {
+              <Text>
+                You will loose all your progress and start the game rom the beginning.
+                Are you sure?
+              </Text>
             }
             isVisible={isRestartVisible}
             setIsVisible={setIsRestartVisible}
@@ -72,9 +105,11 @@ export default function Menu({isSoundOn, setIsSoundOn, restart, appStyle}) {
           />
           <Modal
             title='Sound'
-            message= {
-              `Every time someone turns the sound off, its creator sheds a tear. ` +
-              `Are you sure?`
+            content = {
+              <Text>
+                Every time someone turns the sound off, its creator sheds a tear.
+                Are you sure?
+              </Text>
             }
             isVisible={isSoundVisible}
             setIsVisible={setIsSoundVisible}
@@ -98,7 +133,7 @@ const styles = StyleSheet.create({
   menuStyle: {
     backgroundColor: '#aaa',
     textAlign: 'right',
-    paddingTop: 60,
+    paddingTop: 20,
     paddingBottom: 20,
     flexDirection: 'row',
     justifyContent: 'space-between'
@@ -135,4 +170,7 @@ const styles = StyleSheet.create({
     marginRight: 24,
     marginBottom: 24,
   },
+  hyperlinkStyle: {
+    color: 'blue'
+  }
 })

@@ -4,7 +4,7 @@ import { StyleSheet, View, Modal, Text, Pressable } from 'react-native'
 import DejaVuSansMono from './DejaVuSansMonoText'
 import Button from './Button'
 
-export default function Menu({title, message, isVisible, setIsVisible, buttons}) {
+export default function Menu({title, content, isVisible, setIsVisible, buttons}) {
   return(
     <Modal 
       visible={isVisible}
@@ -21,11 +21,12 @@ export default function Menu({title, message, isVisible, setIsVisible, buttons})
             {title.toUpperCase()}
           </DejaVuSansMono>
         </Text>
+
         <Text style={styles.message}>
           <DejaVuSansMono>
-            {message}
+            {content}
           </DejaVuSansMono>
-        </Text>
+        </Text>            
 
         <View style={styles.buttons}>
           {buttons.map((button, index) => {

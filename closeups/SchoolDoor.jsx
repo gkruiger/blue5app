@@ -48,7 +48,7 @@ export const SchoolDoor = ({solutionFound}) => {
         {'\n'}
         {solution.map((character, index) => {
           return ( 
-            <DejaVuSansMonoText extraStyle={{fontSize: 25}}>
+            <DejaVuSansMonoText key={index} extraStyle={{fontSize: 25}}>
               {numbersSelected.length > index ? '\u{2588}' : '\u{2592}'}
             </DejaVuSansMonoText>
           )

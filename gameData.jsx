@@ -361,7 +361,7 @@ const interactions = [{
     texts: [
         `The gate is closed.`,
         `I push the gate, but it doesn't move.`,
-        `There are multiple lines marked on the the gate.`,
+        `There are multiple lines marked on the gate.`,
     ]
 }, {
     id: 30,
@@ -480,8 +480,8 @@ const interactions = [{
         notInHistory: []
     },
     texts: [
-        `The statue depicts a womon standing on a cloud.`,
-        `At his feet are dried up rests of flowers.`,
+        `The statue depicts a woman standing on a cloud.`,
+        `At her feet are dried up rests of flowers.`,
         `On the pedestal is a plaque with strange symbols and lines.`,
     ],
 }, {
@@ -869,7 +869,7 @@ const interactions = [{
         'Processing coordinates...\n' +
         '\u21B3 WARNING!\n' +
         '\n' +
-        'Coordinates do not align with any know planet or galaxy in the ERCOC Central Hub database.\n' +
+        'Coordinates do not align with any known planet or galaxy in the ERCOC Central Hub database.\n' +
         '\n' +
         'Are you sure you want to proceed?</i>',
     ],
@@ -926,10 +926,10 @@ const locations = [{
 }, {
     id: 'vulcano_top',
     texts: [
-        `I stand at the top of a vulcano.`,
+        `I'm standing at the top of a vulcano.`,
         `Apart from slits of smoke, four pipes come out the pit.`,
         `They go through a box and then disappear in the ground.`,
-        `To my back, small pathway leads down.`,
+        `To my back, a small pathway leads down.`,
     ]
 }, {
     id: 'bridge',
@@ -940,7 +940,7 @@ const locations = [{
         `Four pipes come out of the ground.`,
         `The pipes are connected to a box.`,
         `One pipe leads back from the box to the bridge.`,
-        `As note is attached to the box.`,
+        `A note is attached to the box.`,
         `A path leads up the vulcano.`
     ]
 }, {
@@ -975,7 +975,7 @@ const locations = [{
 }, {
     id: 'between_garden_and_school',
     texts: [
-        `I'm standing on path.`,
+        `I'm standing on a path.`,
         `One end leads to a walled garden.`,
         `The other end to a building that looks like a school.`
     ]
@@ -991,7 +991,7 @@ const locations = [{
 }, {
     id: 'hallway',
     texts: [
-        `I'm standin in a hallway.`,
+        `I'm standing in a hallway.`,
         `There is a door to my left and one to my right.`,
         `To my back is a door to the classroom.`
     ]  
@@ -999,9 +999,9 @@ const locations = [{
     id: 'lab_left',
     texts: [
         `I'm standing in an almost empty room.`,
-        `There are still some glass bottles on the many shelves, with last bits of colorful fluids in them.`,
+        `There are a couple of glass bottles on the many shelves, with last bits of colorful fluids in them.`,
         `And one heavy looking desk, with a wooden box placed in the middle and a note next to it.`,
-        `There is a two big canvasses directly above the desk.`
+        `There are two big canvasses directly above the desk.`
     ]  
 }, {
     id: 'lab_right',
