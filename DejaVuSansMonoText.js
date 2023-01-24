@@ -38,6 +38,7 @@ export default function DejaVuSansMonoText(props) {
 
 const styles = StyleSheet.create({
   textStyle: {
-    fontSize: 20,
+    fontSize: 18,
+    lineHeight: 25
   }
 })

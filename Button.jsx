@@ -21,8 +21,8 @@ export default function Button({title, disabled, onPress}) {
 
 const styles = StyleSheet.create({
   buttonStyle: {
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
     marginRight: 10,
     marginBottom: 10,
     borderRadius: 0,

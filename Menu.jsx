@@ -17,7 +17,7 @@ export default function Menu({isSoundOn, setIsSoundOn, restart, appStyle}) {
     <View style={[appStyle, styles.menuStyle]}>
 
       <View>
-        <DejaVuSansMono fontWeight='bold'>BLUE5</DejaVuSansMono>
+        <DejaVuSansMono fontWeight='bold' extraStyle={{fontSize: 20}}>BLUE5</DejaVuSansMono>
       </View>
 
       <View style={styles.iconsStyle}>
@@ -143,32 +143,6 @@ const styles = StyleSheet.create({
   },
   iconStyle: {
     paddingLeft: 20
-  },
-  androidDefaultscontainer: {
-    backgroundColor: '#FAFAFA',
-  },
-  androidDefaultstitle: {
-    color: '#000000',
-    fontSize: 22,
-    fontWeight: 'bold',
-  },
-  androidDefaultsmessage: {
-    color: '#000000',
-    fontSize: 15,
-    fontWeight: 'normal',
-  },
-  androidAlertBox: {
-    marginLeft: 24,
-    marginRight: 24,
-    marginTop: 50,
-  },
-  androidTitle: {
-    margin: 24,
-  },
-  androidMessage: {
-    marginLeft: 24,
-    marginRight: 24,
-    marginBottom: 24,
   },
   hyperlinkStyle: {
     color: 'blue'
