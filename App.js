@@ -1,7 +1,7 @@
 import { View } from 'react-native';
 
 import React from 'react'
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 
 import { StyleSheet, DevSettings, StatusBar } from 'react-native';
 
@@ -21,6 +21,8 @@ import { ScrollView } from 'react-native';
 export default function App() {
   
   const [stateIsLoaded, setStateIsLoaded] = useState(false)
+
+  const scrollRef = useRef()
 
   useEffect(() => {
     AsyncStorage.getItem('state').then((response) => {
@@ -182,7 +184,10 @@ export default function App() {
           setIsSoundOn={setIsSoundOn}
           restart={restart}
         />
-        <ScrollView>
+        <ScrollView
+          ref={scrollRef}
+          onContentSizeChange={() => {scrollRef.current?.scrollTo({x: 0, y: 0, animated: true})}}
+        >
           <CloseUp
             appStyle={styles.appStyle}
             closeUp={closeUp}
@@ -195,14 +200,14 @@ export default function App() {
             closeUp={closeUp}
             setCloseUp={setCloseUp}
           />
+          <Story
+            appStyle={styles.appStyle}
+            lines={storyLines}
+          />
+          <Sound
+            isSoundOn={isSoundOn}
+          />
         </ScrollView>
-        <Story
-          appStyle={styles.appStyle}
-          lines={storyLines}
-        />
-        <Sound
-          isSoundOn={isSoundOn}
-        />
       </View>
   )
 }
