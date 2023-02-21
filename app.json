@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "blue5",
-    "slug": "blue5",
-    "version": "1.0.0",
+    "slug": "blue5app",
+    "version": "1.0.1",
     "icon": "./assets/icon_darkness.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -24,7 +24,8 @@
         "foregroundImage": "./assets/adaptive-icon_darkness.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.gkruiger.blue5app"
+      "package": "com.gkruiger.blue5app",
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"
