@@ -57,7 +57,7 @@ export const BoxLabLeft = ({solutionFound}) => {
       {input.map((row, rowIndex) => {
           return (
             <Text key={rowIndex}>
-              <EversonMonoText extraStyle={{fontSize: 60}}>
+              <EversonMonoText extraStyle={{fontSize: 60, lineHeight: 60}}>
                 {firstColumn[rowIndex]}{' '}
               </EversonMonoText>
               {row.map((cel, celIndex) => {
@@ -66,13 +66,13 @@ export const BoxLabLeft = ({solutionFound}) => {
                     key={celIndex}
                     onPress={() => {handleClick(rowIndex, celIndex)}}
                   >
-                    <AyanaText extraStyle={{fontSize: 40}}>
+                    <AyanaText extraStyle={{fontSize: 40, lineHeight: 40}}>
                       {possibleLines[cel]}
                     </AyanaText>
                   </TouchableOpacity>
                 )
               })}
-              {'\n'}
+              {rowIndex != 3 && <Text>{'\n'}</Text>}
             </Text>
         )})}
     </Text>

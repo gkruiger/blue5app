@@ -12,19 +12,19 @@ const Bar = ({symbol, length, position, setPosition}) => {
   return (
     <Text>
       <TouchableOpacity onPress={() => {if(position[symbol] > 0) {let newPosition = position.slice(); newPosition[symbol]--; setPosition(newPosition)}}}>
-        <DejaVuSansMonoText extraStyle={{fontSize: 40, marginBottom: -15}}>
+        <DejaVuSansMonoText extraStyle={{fontSize: 40, lineHeight: 55, marginBottom: -15}}>
         {'\u{25C0} '}
         </DejaVuSansMonoText>
       </TouchableOpacity>
       <TouchableOpacity activeOpacity={1}>
-        <DejaVuSansMonoText extraStyle={{fontSize: 40, marginBottom: -15}}>
+        <DejaVuSansMonoText extraStyle={{fontSize: 40, lineHeight: 55, marginBottom: -15}}>
           {plusses.map((item, index) => {
             return index == position[symbol] ? '\u{2588}' : '+'
           })}
         </DejaVuSansMonoText>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => {if(position[symbol] < length-1) {let newPosition = position.slice(); newPosition[symbol]++; setPosition(newPosition)}}}>
-        <DejaVuSansMonoText extraStyle={{fontSize: 40, marginBottom: -15}}>
+        <DejaVuSansMonoText extraStyle={{fontSize: 40, lineHeight: 55, marginBottom: -15}}>
           {' \u{25B6}'}
         </DejaVuSansMonoText>
       </TouchableOpacity>
@@ -120,7 +120,7 @@ export const Microscope = () => {
         {symbols.map((s, index) => {
           if (index < 7) return (
             <TouchableOpacity key={index }onPress={() => {setSymbol(index)}}>
-              <DejaVuSansMonoText extraStyle={{fontSize: 40, letterSpacing: -10}}>
+              <DejaVuSansMonoText extraStyle={{fontSize: 40, lineHeight: 45, letterSpacing: -10}}>
                 {index == symbol ? ' \u{25A3} ' : ' \u{25A1} '}
               </DejaVuSansMonoText>
             </TouchableOpacity>
@@ -131,7 +131,7 @@ export const Microscope = () => {
         {symbols.map((s, index) => {
           if (index >= 7) return (
             <TouchableOpacity key={index }onPress={() => {setSymbol(index)}}>
-              <DejaVuSansMonoText extraStyle={{fontSize: 40, letterSpacing: -10}}>
+              <DejaVuSansMonoText extraStyle={{fontSize: 40, lineHeight: 45, letterSpacing: -10}}>
                 {index == symbol ? ' \u{25A3} ' : ' \u{25A1} '}
               </DejaVuSansMonoText>
             </TouchableOpacity>

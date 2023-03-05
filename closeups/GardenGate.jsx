@@ -58,9 +58,9 @@ export const GardenGate = ({solutionFound}) => {
           <View key={rowIndex}>
             <Text>
               <View>
-                <DejaVuSansMonoText extraStyle={{fontSize: 40}}>
+                <DejaVuSansMonoText extraStyle={{fontSize: 40, lineHeight: 60}}>
                   {firstColumn[rowIndex]}
-                  <DejaVuSansMonoText extraStyle={{fontSize: 40, letterSpacing: 20}}>
+                  <DejaVuSansMonoText extraStyle={{fontSize: 40, letterSpacing: 20, lineHeight: 60}}>
                     {'\u{2501}'}
                   </DejaVuSansMonoText>
                 </DejaVuSansMonoText>
@@ -68,15 +68,15 @@ export const GardenGate = ({solutionFound}) => {
               {row.map((cel, celIndex) => {
                 return (
                   <TouchableOpacity key={(input.length * 4) + celIndex} onPress={() => {handleClick(rowIndex, celIndex)}}>
-                    <DejaVuSansMonoText extraStyle={{fontSize: 40, letterSpacing: 10}}>
+                    <DejaVuSansMonoText extraStyle={{fontSize: 40, letterSpacing: 10, lineHeight: 60}}>
                       {possibleLines[cel]}
                     </DejaVuSansMonoText>
                   </TouchableOpacity>
                 )
               })}
               <View>
-                <DejaVuSansMonoText extraStyle={{fontSize: 40}}>
-                  <DejaVuSansMonoText extraStyle={{fontSize: 40, letterSpacing: 20}}>
+                <DejaVuSansMonoText extraStyle={{fontSize: 40, lineHeight: 60}}>
+                  <DejaVuSansMonoText extraStyle={{fontSize: 40, letterSpacing: 20, lineHeight: 60}}>
                     {'\u{2501}'}
                   </DejaVuSansMonoText>
                   {lastColumn[rowIndex]}

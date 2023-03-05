@@ -35,6 +35,7 @@ export default function App() {
         setLocation(state.location)
         setHistory(state.history)
         setCloseUp(state.closeUp)
+        setPuzzlesSolved(state.puzzlesSolved)
       }
       
       setStateIsLoaded(true)
@@ -46,6 +47,7 @@ export default function App() {
   const [storyLines, setStoryLines] = useState()
   const [location, setLocation] = useState('')
   const [history, setHistory] = useState([])
+  const [puzzlesSolved, setPuzzlesSolved] = useState([])
   const [closeUp, setCloseUp] = useState(undefined)
  
   useEffect(() => {
@@ -58,9 +60,10 @@ export default function App() {
         location: location,
         history: history,
         closeUp: closeUp,
+        puzzlesSolved: puzzlesSolved
       })
     )
-  }, [isSoundOn, actions, storyLines, location, history, closeUp]);
+  }, [isSoundOn, actions, storyLines, location, history, closeUp, puzzlesSolved]);
  
   const processAction = (id) => {
     
@@ -156,6 +159,7 @@ export default function App() {
     for(let action of interactions) {
       if(action?.closeUp?.id == closeUp.id) {
         setCloseUp(undefined)
+        setPuzzlesSolved(puzzlesSolved => [...puzzlesSolved, action.id])
         setHistory(history => [...history, action.id])
         setStoryLines(storyLines => [...storyLines, {text: closeUp.texts.join(' ') + ' ', id: uuidv4()}])
       }
@@ -183,6 +187,8 @@ export default function App() {
           isSoundOn={isSoundOn} 
           setIsSoundOn={setIsSoundOn}
           restart={restart}
+          interactions={interactions}
+          puzzlesSolved={puzzlesSolved}
         />
         <ScrollView
           ref={scrollRef}

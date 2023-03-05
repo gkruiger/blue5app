@@ -38,7 +38,7 @@ export const BoxLabRight = ({solutionFound}) => {
             key={index}
             onPress={() => {handleClick(color)}}
           >
-            <DejavuSansMonoText extraStyle={{fontSize: 80, color: color}}>
+            <DejavuSansMonoText extraStyle={{fontSize: 80, lineHeight: 70, color: color}}>
               &#9724;
             </DejavuSansMonoText>
           </TouchableOpacity>

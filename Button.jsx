@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#666',
   },
   disabled: {
-    backgroundColor: '#aaa'
+    backgroundColor: '#bbb'
   }
 })

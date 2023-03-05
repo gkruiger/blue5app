@@ -12,19 +12,19 @@ const Bar = ({position, setPosition}) => {
   return (
     <Text>
       <TouchableOpacity onPress={() => {if(position > 0) {setPosition(position-1)}}}>
-        <DejaVuSansMonoText extraStyle={{fontSize: 40}}>
+        <DejaVuSansMonoText extraStyle={{fontSize: 40, lineHeight: 45}}>
         {'\u{25C0} '}
         </DejaVuSansMonoText>
       </TouchableOpacity>
       <TouchableOpacity activeOpacity={1}>
-        <DejaVuSansMonoText extraStyle={{fontSize: 40}}>
+        <DejaVuSansMonoText extraStyle={{fontSize: 40, lineHeight: 45}}>
         {plusses.map((item, index) => {
           return index == position ? '\u{2588}' : '+'
         })}
         </DejaVuSansMonoText>
       </TouchableOpacity>
       <TouchableOpacity onPress={() => {if(position < length-1) setPosition(position+1)}}>
-        <DejaVuSansMonoText extraStyle={{fontSize: 40}}>
+        <DejaVuSansMonoText extraStyle={{fontSize: 40, lineHeight: 45}}>
           {' \u{25B6}'}
         </DejaVuSansMonoText>
       </TouchableOpacity>
@@ -36,14 +36,14 @@ const Bar = ({position, setPosition}) => {
 export const Device = () => {
 
   const symbols = [
-    <DejaVuSansMonoText extraStyle={{fontSize: 70, letterSpacing: 15}}>-</DejaVuSansMonoText>,
-    <DejaVuSansMonoText extraStyle={{fontSize: 70, letterSpacing: 15, color: 'blue'}}>{'\u{25E5}'}</DejaVuSansMonoText>,
-    <DejaVuSansMonoText extraStyle={{fontSize: 70, letterSpacing: 15, color: 'yellow'}}>{'\u{25E5}'}</DejaVuSansMonoText>,
-    <DejaVuSansMonoText extraStyle={{fontSize: 70, letterSpacing: 15, color: 'red'}}>{'\u{25E5}'}</DejaVuSansMonoText>,
-    <DejaVuSansMonoText extraStyle={{fontSize: 70, letterSpacing: 15, color: 'blue'}}>{'\u{25E3}'}</DejaVuSansMonoText>,
-    <DejaVuSansMonoText extraStyle={{fontSize: 70, letterSpacing: 15, color: 'yellow'}}>{'\u{25E3}'}</DejaVuSansMonoText>,
-    <DejaVuSansMonoText extraStyle={{fontSize: 70, letterSpacing: 15, color: 'red'}}>{'\u{25E3}'}</DejaVuSansMonoText>,
-    <DejaVuSansMonoText extraStyle={{fontSize: 70, letterSpacing: 15}}>-</DejaVuSansMonoText>,
+    <DejaVuSansMonoText extraStyle={{fontSize: 70, lineHeight: 60, letterSpacing: 15}}>-</DejaVuSansMonoText>,
+    <DejaVuSansMonoText extraStyle={{fontSize: 70, lineHeight: 60, letterSpacing: 15, color: 'blue'}}>{'\u{25E5}'}</DejaVuSansMonoText>,
+    <DejaVuSansMonoText extraStyle={{fontSize: 70, lineHeight: 60, letterSpacing: 15, color: 'yellow'}}>{'\u{25E5}'}</DejaVuSansMonoText>,
+    <DejaVuSansMonoText extraStyle={{fontSize: 70, lineHeight: 60, letterSpacing: 15, color: 'red'}}>{'\u{25E5}'}</DejaVuSansMonoText>,
+    <DejaVuSansMonoText extraStyle={{fontSize: 70, lineHeight: 60, letterSpacing: 15, color: 'blue'}}>{'\u{25E3}'}</DejaVuSansMonoText>,
+    <DejaVuSansMonoText extraStyle={{fontSize: 70, lineHeight: 60, letterSpacing: 15, color: 'yellow'}}>{'\u{25E3}'}</DejaVuSansMonoText>,
+    <DejaVuSansMonoText extraStyle={{fontSize: 70, lineHeight: 60, letterSpacing: 15, color: 'red'}}>{'\u{25E3}'}</DejaVuSansMonoText>,
+    <DejaVuSansMonoText extraStyle={{fontSize: 70, lineHeight: 60, letterSpacing: 15}}>-</DejaVuSansMonoText>,
   ]
 
   const [positionOne, setPositionOne] = useState(0)

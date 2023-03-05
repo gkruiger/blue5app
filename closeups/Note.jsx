@@ -16,7 +16,7 @@ export const Note = ({id}) => {
     ['\u{1F706}', 'Aqua regia (royal water)', 'ali i wai'],
     ['\u{1F701}', 'Air', 'ea'],
     ['\u{1F721}', 'Iron ore', 'hao hao'],
-    ['\u{1F703}', 'Earth', 'honua'],
+    ['\u{1F703}', 'Earth', 'lepo'],
     ['\u{1F72A}', 'Lead ore', 'ke kepau oka'],
     ['\u{1F720}', 'Copper ore', 'keleawe keleawe'],
     ['\u{1F732}', 'Regulus', 'liona'],
@@ -91,7 +91,7 @@ export const Note = ({id}) => {
     pages: [
       <View>
         <IosevkaText extraStyle={{textAlign:'center', fontSize: 40}}>
-          {String.fromCodePoint(0x1FBC7)} - {String.fromCodePoint(0x2B15)}{"\n"}
+          {String.fromCodePoint(0x1FBC7)} - {String.fromCodePoint(0x25EA)}{"\n"}
           {String.fromCodePoint(0x1FBC5)} - {String.fromCodePoint(0x2B13)}
         </IosevkaText>
       </View>
@@ -187,7 +187,7 @@ export const Note = ({id}) => {
           Today I tried opening the garden gate.
           I saw people coming in and out of the garden, but when I tried to open the gate, it was closed.
           I asked Kayana about it.
-          She said that only those who know all the sixteen steps of the gods, can get in.
+          She said that only those who know all the sixteen steps of the path of the gods, can get in.
           When I looked confused, she drew a few symbols in the sand:{"\n"}{"\n"}
           {String.fromCodePoint(0x25B6)}{' '}
           {String.fromCodePoint(0x2501)}{' '}
@@ -262,14 +262,14 @@ export const Note = ({id}) => {
     id: 'schoolblackboardright',
     pages: [
       <Text style={{textAlign: 'center'}}>
-        <DejaVuSansMonoText extraStyle={{fontSize: 40, color: 'yellow', letterSpacing: 40}}>{'\u{25B2}'}</DejaVuSansMonoText>
+        <DejaVuSansMonoText extraStyle={{fontSize: 40, color: 'yellow', letterSpacing: 40, lineHeight: 50}}>{'\u{25B2}'}</DejaVuSansMonoText>
         {'\n'}
-        <DejaVuSansMonoText extraStyle={{fontSize: 40, color: 'green', letterSpacing: 40}}>{'\u{25B2}'}</DejaVuSansMonoText>
-        <DejaVuSansMonoText extraStyle={{fontSize: 40, color: 'orange', letterSpacing: 40}}>{'\u{25B2}'}</DejaVuSansMonoText>
+        <DejaVuSansMonoText extraStyle={{fontSize: 40, color: 'green', letterSpacing: 40, lineHeight: 50}}>{'\u{25B2}'}</DejaVuSansMonoText>
+        <DejaVuSansMonoText extraStyle={{fontSize: 40, color: 'orange', letterSpacing: 40, lineHeight: 50}}>{'\u{25B2}'}</DejaVuSansMonoText>
         {'\n'}
-        <DejaVuSansMonoText extraStyle={{fontSize: 40, color: 'blue', letterSpacing: 40}}>{'\u{25B2}'}</DejaVuSansMonoText>
-        <DejaVuSansMonoText extraStyle={{fontSize: 40, color: 'purple', letterSpacing: 40}}>{'\u{25B2}'}</DejaVuSansMonoText>
-        <DejaVuSansMonoText extraStyle={{fontSize: 40, color: 'red', letterSpacing: 40}}>{'\u{25B2}'}</DejaVuSansMonoText>
+        <DejaVuSansMonoText extraStyle={{fontSize: 40, color: 'blue', letterSpacing: 40, lineHeight: 50}}>{'\u{25B2}'}</DejaVuSansMonoText>
+        <DejaVuSansMonoText extraStyle={{fontSize: 40, color: 'purple', letterSpacing: 40, lineHeight: 50}}>{'\u{25B2}'}</DejaVuSansMonoText>
+        <DejaVuSansMonoText extraStyle={{fontSize: 40, color: 'red', letterSpacing: 40, lineHeight: 50}}>{'\u{25B2}'}</DejaVuSansMonoText>
       </Text>
     ]
   }, {

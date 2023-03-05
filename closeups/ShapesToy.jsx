@@ -71,7 +71,7 @@ export const ShapesToy = () => {
     <View style={{alignItems: 'center'}}>
       {matrix.map((row, rowIndex) => { 
         return (
-          <DejaVuSansMonoText key={rowIndex}>
+          <DejaVuSansMonoText extraStyle={{lineHeight: 60}} key={rowIndex}>
             {row.map((cel, celIndex) => { 
               return (
                 <TouchableOpacity
@@ -91,7 +91,7 @@ export const ShapesToy = () => {
                   }}
                 >
                   <DejaVuSansMonoText 
-                    extraStyle={[{fontSize: 40, letterSpacing: 20}, getStyle(rowIndex, celIndex)]}
+                    extraStyle={[{fontSize: 40, letterSpacing: 20, lineHeight: 60}, getStyle(rowIndex, celIndex)]}
                   >
                     {cel}
                   </DejaVuSansMonoText>
