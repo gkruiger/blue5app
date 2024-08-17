@@ -9,6 +9,9 @@ For the Web variant of this game: https://github.com/gkruiger/blue5.
 ## Background information
 More about my how the development of this game on my personal website: https://www.ontdeksels.nl/blue5-an-adventure-in-monospace/.
 
+## How to build
+Use `npx eas-cli build -p android` to build a version for the Google Play Store and `eas submit --platform android` to upload it to the store.
+
 ## Dependencies
 ### NPM packages
 Apart from React Native:
