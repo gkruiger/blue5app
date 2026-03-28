@@ -1,3 +1,6 @@
+# DEPRECATED
+Builing this has been fun. Continuously updating it in order to keep up with the requirements for the Google PLay Store, quite the opposite. The app is no longer available in the store.
+
 # Blue5 | A monospace adventure
 Learning myself React while creating a simple, but hopefully challenging and enjoyable game.<br>
 For the Web variant of this game: https://github.com/gkruiger/blue5.
